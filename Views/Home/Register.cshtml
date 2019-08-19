@@ -1,0 +1,45 @@
+﻿@model ClassProject.Models.UserResponse
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body style="background-color:orange;"></body>
+<body>
+<div class="panel panel-default">
+    <div class="panel-heading text-center"><h4>Register</h4></div>
+    <div class="panel-body">
+        <form class="p-a-1" asp-action="Register" method="post">
+            <div asp-validation-summary="All"></div>
+            <div class="form-group">
+                <label asp-for="FirstName">First Name:</label>
+                <input class="form-control" asp-for="FirstName"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName">Last Name:</label>
+                <input class="form-control" asp-for="LastName"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="DisplayName">Display Name:</label>
+                <input class="form-control" asp-for="DisplayName"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email">Email:</label>
+                <input class="form-control" asp-for="Email"/>
+            </div>
+            <button type="button">Upload Photo</button>
+
+
+        </form>
+    </div>
+</div>
+<div class="text-center">
+    <a class=" btn btn-success" asp-action="Account">Register</a><br/><br/><br/>
+
+</div>
+</body>
+</html>

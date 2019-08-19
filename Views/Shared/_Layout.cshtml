@@ -1,0 +1,90 @@
+﻿<<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title> Second Chance</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+            border-right: 1px solid #bbb;
+        }
+
+        li:last-child {
+            border-right: none;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: #111;
+        }
+        
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        
+        .fa:hover {
+            opacity: 0.7;
+        }
+        /* Facebook */
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <ul>
+        @*<li>
+            <a class="active"
+               href="#home"> Home</a>
+        </li>*@
+        @*<li>
+            <a href="#Rescue"> Find a Rescue</a>
+
+
+        </li>*@
+        <li><a asp-area="" asp-controller="Home" asp-action="">Home</a></li>
+        <li><a asp-area="" asp-controller="Home" asp-action="About">About Us</a></li>
+        <li><a asp-area="" asp-controller="Home" asp-action="Rescue">Find a Rescue</a></li>
+        @*<li> <a href="#About"> About Us</a> </li>*@
+        <li style="float:right"> <a asp-area="" asp-controller="Home" asp-action="SignIn">Account</a></li>
+    </ul>
+    
+</body>
+    
+
+</html>
+
+<div class="container body-content">
+    @RenderBody()
+    <hr />
+
+</div>
+
+

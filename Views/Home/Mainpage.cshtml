@@ -1,0 +1,41 @@
+﻿@model ClassProject.Models.UserResponse
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title> Second Chance</title>
+        <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+    </head>
+<body style="background-color:orange;">
+
+        <div class="text-center">
+            <h1>Second Chance</h1>
+            <h2>Giving a second chance to those who will always put you first</h2>
+            @*<a class="btn btn-success" asp-action="SignIn"> Sign In</a>*@
+            @*<a class="btn btn-success" asp-action="Register"> Register</a><br /><br />*@
+            <form class="example" action="action_page.php">
+                <input type="text" placeholder="Enter Zip Code..." name="search">
+                <a class="btn btn-success" asp-action="Result"> Search</a>
+            </form>
+
+            <p>OR</p>
+            <form class="login-form">
+                <input type="text" placeholder="Username" /><br /><br />
+                <input type="password" placeholder="Password" /><br /><br />
+                <a class=" btn btn-success" asp-action="Account"> Sign In</a><br/><br/>
+                   
+                <p class="message">
+                    Not registered? <a class="btn btn-success" asp-action="Register"> Register</a><br /><br />
+                    @*<button>Sign In</button><br /><br />
+					<a href="#">Create an account</a>*@
+                </p>
+            </form>
+
+        </div>
+
+
+    </body>
+</html>
+
