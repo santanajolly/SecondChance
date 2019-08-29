@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ClassProject.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ClassProject
 {
@@ -33,7 +35,10 @@ namespace ClassProject
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            var connection = @"Server=(localdb)\mssqllocaldb;Database=Blogging;Trusted_Connection=True;ConnectRetryCount=0";
+            services.AddDbContext<BloggingContext>(options => options.UseSqlServer(connection));
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -60,4 +65,5 @@ namespace ClassProject
             });
         }
     }
+    
 }
