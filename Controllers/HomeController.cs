@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using ClassProject.Models;
 using Microsoft.AspNetCore.Mvc;
-using ClassProject.Models;
 
 
 namespace ClassProject.Controllers
@@ -16,6 +11,11 @@ namespace ClassProject.Controllers
             return View("Mainpage");
         }
         public ViewResult SignIn()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ViewResult Register(UserResponse user)
         {
             return View();
         }

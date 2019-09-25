@@ -1,15 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace ClassProject.Models
 {
     public class AnimalRepository : IAnimalRepository
     {
+        private ApplicationDbContext context;
+
+        public AnimalRepository(ApplicationDbContext context)
+        {
+            this.context = context;
+        }
         List<AnimalRescue> IAnimalRepository.GetAllRescuesByZip(string zipcode)
         {
-            throw new NotImplementedException();
+            return context.AnimalRescues.Where(a => zipcode == null || a.Zipcode == zipcode).AsQueryable<AnimalRescue>().ToList();
         }
 
         AnimalRescue IAnimalRepository.GetInfoByID(int AnimalRescueID)
