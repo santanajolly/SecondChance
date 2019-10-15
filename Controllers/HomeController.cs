@@ -1,7 +1,6 @@
 ﻿using ClassProject.Models;
 using Microsoft.AspNetCore.Mvc;
 
-
 namespace ClassProject.Controllers
 {
     public class HomeController : Controller
@@ -45,6 +44,10 @@ namespace ClassProject.Controllers
             return View();
         }
 
+        //SignIn In methods
+
+
+
         //public IActionResult About()
         //{
         //    ViewData["Message"] = "Your application description page.";
@@ -69,5 +72,6 @@ namespace ClassProject.Controllers
         //{
         //    return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         //}
+
     }
 }
